@@ -14,6 +14,10 @@ public class Main {
         BufferedReader lector = new BufferedReader(new InputStreamReader(System.in));
         Automovil audi = new Automovil();
 
+        System.out.println("Tu coche actual es :");
+        System.out.println(audi.getMarca());
+        System.out.println(audi.getModelo());
+
         try {
             System.out.println("Que marca quieres?");
             String nuevaMarca = lector.readLine();
