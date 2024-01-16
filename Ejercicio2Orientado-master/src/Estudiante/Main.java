@@ -6,10 +6,10 @@ import java.io.InputStreamReader;
 
 public class Main {
     /*
-    Ejercicio 4: Clase Producto
-    Objetivo: Crea una clase Producto con tres propiedades privadas: nombre (String), precio
-    (double), y stock (int). Desarrolla los métodos getter y setter necesarios.
-    Desafío adicional: En el setter de stock, asegúrate de que no sea un número negativo.
+    Objetivo: Construye una clase Estudiante con tres propiedades privadas: nombre (String), edad
+    (int), y calificacion (double). Implementa los getters y setters correspondientes.
+    Desafío adicional: Asegúrate de que la edad sea un número positivo y que la calificación esté
+    en el rango de 0 a 100.
     */
 
     public static void main(String[] args) throws IOException {
@@ -39,6 +39,8 @@ public class Main {
                 double calificacion = Double.parseDouble(lector.readLine());
                 if (calificacion < 0) {
                     throw new IllegalArgumentException("La calificación no puede ser un número negativo.");
+                } else if (calificacion > 100) {
+                    throw new IllegalArgumentException("La calificacion no puede ser mayor a 100");
                 }
                 DAM1.setCalificacion(calificacion);
 

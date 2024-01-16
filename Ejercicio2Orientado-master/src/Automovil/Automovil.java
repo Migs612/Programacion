@@ -10,11 +10,11 @@ public class Automovil {
     }
 
     public String getMarca() {
-        return "Tu marca de coche es "+marca;
+        return "Tu marca de coche es " + marca;
     }
 
     public String getModelo() {
-        return "El modelo es "+modelo;
+        return "El modelo es " + modelo;
     }
 
     public void setMarca(String nuevaMarca) {
@@ -26,6 +26,6 @@ public class Automovil {
     }
 
     public String nuevoAutomovil() {
-        return "Tu coche sera de la marca"+marca+" y el modelo sera "+modelo;
+        return "Tu coche sera de la marca " + marca + " y el modelo sera un " + modelo;
     }
 }
