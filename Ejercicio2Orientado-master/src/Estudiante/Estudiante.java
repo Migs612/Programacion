@@ -11,12 +11,12 @@ public class Estudiante {
         calificacion = 0.0;
     }
 
-    public double getCalificacion() {
-        return calificacion;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setCalificacion(double calificacion) {
-        this.calificacion = calificacion;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public int getEdad() {
@@ -27,11 +27,11 @@ public class Estudiante {
         this.edad = edad;
     }
 
-    public String getNombre() {
-        return nombre;
+    public double getCalificacion() {
+        return calificacion;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setCalificacion(double calificacion) {
+        this.calificacion = calificacion;
     }
 }
