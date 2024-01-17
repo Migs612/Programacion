@@ -35,7 +35,18 @@ public class RelojdeAlarma {
         this.minutos = nuevaFecha.getMinute();
         this.horaActual = hora + ":" + minutos;
     }
+    public boolean getAlarmaActiva() {
+        return this.alarmaActiva;
+    }
     public void setAlarmaActiva(boolean alarmaActiva) {
         this.alarmaActiva = alarmaActiva;
+    }
+
+    public boolean compararHoras() {
+        if(this.horaAlarma.equals(this.horaActual)){
+            return true;
+        } else {
+            return false;
+        }
     }
 }

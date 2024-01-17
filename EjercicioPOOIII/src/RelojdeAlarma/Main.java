@@ -13,11 +13,9 @@ public class Main {
 
         System.out.println("Quieres activar una alarma?");
         String activar = lector.nextLine();
-        boolean alarmaActiva;
 
         if (activar.equalsIgnoreCase("Si")) {
-            alarmaActiva = true;
-            Casio.setAlarmaActiva(  alarmaActiva);
+            Casio.setAlarmaActiva(true);
             System.out.println("Ingrese la hora de la alarma (formato HH:mm): ");
             String horaAlarma = lector.nextLine();
 
@@ -28,14 +26,33 @@ public class Main {
                     int hora = Integer.parseInt(partes[0]);
                     int minutos = Integer.parseInt(partes[1]);
                     Casio.setHoraAlarma(hora, minutos);
+                    Casio.setHoraActual();
                 } catch (NumberFormatException e) {
-                    System.out.println("Formato incorrecto. Ingrese la hora de la alarma en el formato correcto.");
+                    System.out.println("Pon una hora correcta");
                 }
             } else {
-                System.out.println("Formato incorrecto. Ingrese la hora de la alarma en el formato correcto.");
+                System.out.println("Pon una hora correcta");
             }
         } else if (activar.equalsIgnoreCase("No")) {
             System.out.println("Esta bien, disfrute el dia");
+        }
+
+        System.out.println("Alarma configurada a las "+Casio.getHoraAlarma());
+
+        System.out.println("Estas seguro que quieres tener esta alarma?");
+        activar = lector.nextLine();
+
+        if (activar.equalsIgnoreCase("Si")){
+            System.out.println("Perfecto, te avisare cuando sea la hora");
+        } else if (activar.equalsIgnoreCase("No")) {
+            System.out.println("Es una pena, me despido");
+            System.exit(0);
+        }
+
+        if (Casio.getAlarmaActiva() && Casio.compararHoras()) {
+            System.out.println("Alarma sonando.");
+        } else {
+            System.out.println("Todavia no es tu hora.");
         }
     }
 }
