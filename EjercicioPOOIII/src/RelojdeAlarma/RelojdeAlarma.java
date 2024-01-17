@@ -43,10 +43,6 @@ public class RelojdeAlarma {
     }
 
     public boolean compararHoras() {
-        if(this.horaAlarma.equals(this.horaActual)){
-            return true;
-        } else {
-            return false;
-        }
+        return this.horaAlarma.equals(this.horaActual);
     }
 }
