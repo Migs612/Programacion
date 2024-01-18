@@ -9,7 +9,6 @@ public class RelojdeAlarma {
     private String horaAlarma;
     private String horaActual;
     private boolean alarmaActiva;
-
     public RelojdeAlarma() {
         hora = locaDate.getHour();
         minutos = locaDate.getMinute();
@@ -17,7 +16,6 @@ public class RelojdeAlarma {
         horaActual = hora+":"+ minutos;
         alarmaActiva = false;
     }
-
     public String getHoraAlarma() {
         return horaAlarma;
     }
@@ -41,7 +39,6 @@ public class RelojdeAlarma {
     public void setAlarmaActiva(boolean alarmaActiva) {
         this.alarmaActiva = alarmaActiva;
     }
-
     public boolean compararHoras() {
         return this.horaAlarma.equals(this.horaActual);
     }
