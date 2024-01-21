@@ -51,10 +51,35 @@ public class MainFinal {
 
         String[] pasosDeReceta = receta.getPasosReceta();
 
-        System.out.println("Pasos de la receta:");
+        System.out.println("\nPasos de la receta:");
         for (int i = 0; i < pasosDeReceta.length; i++) {
             System.out.println((i + 1) + ". " + pasosDeReceta[i]);
         }
+
+        int opcion;
+        do {
+            System.out.println("\nQue quieres hacer ahora?");
+            System.out.println("1. Ver receta final");
+            System.out.println("2. Eliminar ingrediente");
+            System.out.println("3. Eliminar paso");
+
+            opcion = Integer.parseInt(lector.readLine());
+
+            switch (opcion) {
+                case 1:
+                    RecetaFinal.verReceta(receta);
+                    break;
+                case 2:
+                    RecetaFinal.eliminarIngrediente(receta, lector);
+                    break;
+                case 3:
+                    RecetaFinal.eliminarPasoReceta(receta);
+                    break;
+                default:
+                    System.out.println("Opción incorrecta");
+            }
+
+        } while (opcion != 1);
     }
 }
 
