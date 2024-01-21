@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Hotel hotel = new Hotel(100);
-        Scanner scanner = new Scanner(System.in);
+        Scanner lector = new Scanner(System.in);
 
         int opcion;
 
@@ -16,7 +16,7 @@ public class Main {
             System.out.println("3. Cancelar reserva");
             System.out.println("0. Salir");
             System.out.print("Seleccione una opción: ");
-            opcion = scanner.nextInt();
+            opcion = lector.nextInt();
 
             switch (opcion) {
                 case 1:
@@ -29,10 +29,10 @@ public class Main {
                     hotel.cancelarReserva();
                     break;
                 case 0:
-                    System.out.println("¡Gracias por usar nuestro sistema de reservas!");
+                    System.out.println("Gracias por reservar con nosotros!");
                     break;
                 default:
-                    System.out.println("Opción no válida. Por favor, elija nuevamente.");
+                    System.out.println("La opcion no es valida");
             }
         } while (opcion != 0);
     }

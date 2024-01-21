@@ -67,18 +67,18 @@ class Hotel {
             System.out.println("Habitación " + habitacion.getNumero() +
                     " - Tipo: " + habitacion.getTipo() +
                     " - Estado: " + (habitacion.getOcupada() ? "Ocupada" : "Libre") +
-                    (habitacion.getOcupada() ? " - Huesped: " + habitacion.getNombreHuesped() : ""));
+                    (habitacion.getOcupada() ? " - Huesped: " + habitacion.getNombreHuesped() : "") + "\t");
         }
     }
 
     public void realizarReserva() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner lector = new Scanner(System.in);
 
-        System.out.print("Ingrese el número de habitación que desea (1-100): ");
-        int numHabitacion = scanner.nextInt();
+        System.out.print("Ingrese el numero de habitacion que desea (1-100): ");
+        int numHabitacion = lector.nextInt();
 
         if (numHabitacion < 1 || numHabitacion > 100) {
-            System.out.println("Número de habitación inválido. Debe estar entre 1 y 100.");
+            System.out.println("Número de habitacion invalido");
             return;
         }
 
@@ -88,21 +88,21 @@ class Hotel {
             System.out.println("La habitación está ocupada. No se puede reservar.");
         } else {
             System.out.print("Ingrese su nombre: ");
-            String nombreHuesped = scanner.next();
+            String nombreHuesped = lector.next();
 
             habitacionSeleccionada.reservar(nombreHuesped);
-            System.out.println("Reserva exitosa. ¡Disfrute de su estadía!");
+            System.out.println("Reserva hecha. ¡Disfrute de su estadía!");
         }
     }
 
     public void cancelarReserva() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner lector = new Scanner(System.in);
 
-        System.out.print("Ingrese el número de habitación que desea cancelar: ");
-        int numHabitacion = scanner.nextInt();
+        System.out.print("Ingrese el numero de habitacion que desea cancelar: ");
+        int numHabitacion = lector.nextInt();
 
         if (numHabitacion < 1 || numHabitacion > 100) {
-            System.out.println("Número de habitación inválido. Debe estar entre 1 y 100.");
+            System.out.println("Número de habitación incorrecto");
             return;
         }
 
