@@ -6,11 +6,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class RecetaFinal {
-    String nombreReceta;
-    int numeroIngredientes;
-    String[] ingredientes;
-    int numeroPasosReceta;
-    String[] pasosReceta;
+    private String nombreReceta;
+    private int numeroIngredientes;
+    private String[] ingredientes;
+    private int numeroPasosReceta;
+    private String[] pasosReceta;
 
     public RecetaFinal() {
         nombreReceta = " ";
