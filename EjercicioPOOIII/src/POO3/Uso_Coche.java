@@ -1,4 +1,7 @@
 package POO3;
+
+import javax.swing.*;
+
 public class Uso_Coche {
 
     public static void main(String[] args) {
@@ -31,10 +34,15 @@ public class Uso_Coche {
          * Vete a Coche.Java*/
 
         System.out.println(Subaru.dime_datos_generales());
+
+        Subaru.establece_color(JOptionPane.showInputDialog("Introduce el color"));
         System.out.println(Subaru.dime_color());
-        /*14. Vamos a ver tu coche y sus asientos. */
-        Subaru.configura_asientos("si");
+
+        Subaru.configura_asientos(JOptionPane.showInputDialog("Tienes asientos de cuero"));
         System.out.println(Subaru.dime_asientos());
+
+        Subaru.configura_Climatizador(JOptionPane.showInputDialog("Tienes climatizador o sos un motochorro?"));
+        System.out.println(Subaru.dime_climatizador());
     }
 
 }
