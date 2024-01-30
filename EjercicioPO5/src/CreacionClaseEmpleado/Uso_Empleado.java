@@ -69,7 +69,7 @@ class misEmpleados implements Comparable<misEmpleados> {
     }
 
     public void dimeDatos() {
-        SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd-MM-yyyy");
         String fechaAlta = formatoFecha.format(alta);
 
         JOptionPane.showMessageDialog(null, "Nombre " + nombre + "\n" + "Sueldo " + sueldo + "\n" + "Alta " + fechaAlta);
