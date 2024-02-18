@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Abstract/Abstract.iml" filepath="$PROJECT_DIR$/Abstract/Abstract.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programacion/AnalizadorTexto-master/AnalizadorTexto-master.iml" filepath="$PROJECT_DIR$/Programacion/AnalizadorTexto-master/AnalizadorTexto-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/AnalizadorTexto-master/AnalizadorTexto-master1.iml" filepath="$PROJECT_DIR$/AnalizadorTexto-master/AnalizadorTexto-master1.iml" />
       <module fileurl="file://$PROJECT_DIR$/CajeroAutomatico-master/CajeroAutomatico-master.iml" filepath="$PROJECT_DIR$/CajeroAutomatico-master/CajeroAutomatico-master.iml" />
